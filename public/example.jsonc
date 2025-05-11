@@ -1,0 +1,72 @@
+{
+  "type": "object",
+  "properties": {
+    "platform": {
+      "type": "literal",
+      "const": "tiktok",
+      "description": "Social platform identifier",
+      "__comment": "Social platform identifier"
+    },
+    "template_version": {
+      "type": "string",
+      "description": "Schema version",
+      "__comment": "Schema version"
+    },
+    "post_id": {
+      "type": "string",
+      "nullable": true,
+      "description": "Unique TikTok post ID",
+      "__comment": "Unique TikTok post ID"
+    },
+    "author": {
+      "type": "object",
+      "description": "Post author metadata",
+      "__comment": "Post author metadata",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Author's TikTok ID",
+          "__comment": "Author's TikTok ID"
+        },
+        "uniqueId": {
+          "type": "string",
+          "description": "Author's @ handle",
+          "__comment": "Author's @ handle"
+        },
+        "nickname": {
+          "type": "string",
+          "description": "Display name",
+          "__comment": "Display name"
+        }
+      }
+    },
+    "original_desc": {
+      "type": "string",
+      "nullable": true,
+      "description": "Raw caption/description from the post",
+      "__comment": "Raw caption/description from the post"
+    },
+    "dimensions": {
+      "type": "object",
+      "description": "Overall post dimensions",
+      "__comment": "Overall post dimensions",
+      "properties": {
+        "width": {
+          "type": "number",
+          "description": "Content width in pixels",
+          "__comment": "Content width in pixels"
+        },
+        "height": {
+          "type": "number",
+          "description": "Content height in pixels",
+          "__comment": "Content height in pixels"
+        }
+      }
+    },
+    "slide_count": {
+      "type": "number",
+      "description": "Number of image slides",
+      "__comment": "Number of image slides"
+    }
+  }
+}

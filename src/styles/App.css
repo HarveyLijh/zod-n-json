@@ -1,0 +1,255 @@
+.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 1.5rem 2rem;
+  background-color: var(--surface-color);
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.header-controls {
+  display: flex;
+  gap: 1rem;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.converter-container {
+  display: flex;
+  height: 100%;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.editor-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  background-color: var(--surface-color);
+  box-shadow: var(--shadow);
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: var(--surface-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.editor-header h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.copy-button {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.copy-button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.option-info {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-left: 1.75rem;
+  margin-top: 0.25rem;
+  line-height: 1.2;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.options input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+}
+
+.convert-button {
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  box-shadow: var(--shadow);
+}
+
+.toggle-button {
+  background-color: var(--accent-color);
+  font-weight: 500;
+}
+
+.toggle-button:hover {
+  background-color: var(--secondary-color);
+}
+
+.error-container {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--error-color);
+  border-radius: var(--radius);
+}
+
+.error-message {
+  color: var(--error-color);
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.helper-panel {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.helper-text {
+  margin-bottom: 1rem;
+}
+
+.helper-text h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.helper-text p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.tips {
+  font-size: 0.85rem;
+}
+
+.tips h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.tips ul {
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.tips li {
+  margin-bottom: 0.25rem;
+  color: var(--text-secondary);
+}
+
+.tips code {
+  background-color: rgba(0,0,0,0.05);
+  padding: 0.15rem 0.3rem;
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+.more-help {
+  margin-top: 0.75rem;
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+footer {
+  padding: 1.5rem 2rem;
+  background-color: var(--surface-color);
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border-color);
+}
+
+footer a {
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .converter-container {
+    flex-direction: column;
+  }
+
+  .controls {
+    flex-direction: row;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .header-controls {
+    width: 100%;
+  }
+
+  .toggle-button {
+    width: 100%;
+  }
+}
